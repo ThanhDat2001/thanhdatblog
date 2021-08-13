@@ -1,0 +1,358 @@
+/* reset css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#header{
+	padding-top: 500px;
+    background-image: url("https://speedcom.vn/wp-content/uploads/2020/11/pc-gaming-1024x768-1.jpg");
+    top: 0;
+	right: 0;
+	left: 0;
+    height: 100%;
+}
+#header #nav{
+    position: fixed;
+     top: 0;
+    right: 0;
+    left: 0;
+    right: 40%;
+    width: 100%;
+    background:  rgba(24,27,23,0.6);
+    text-align: center;
+}
+
+
+#nav > li{
+    text-align: top;
+    display: inline-block;
+    font-size: 20px;
+}
+
+#nav > li > a{
+    text-decoration: none;
+    color: rgb(85, 158, 207);
+    font-style: bold;
+}
+
+#nav li a {
+	text-decoration: 0;
+	line-height: 46px;
+	padding: 0 24px;
+    border-radius: 10%;
+    display: block;	
+    font-size: larger;
+}
+
+.text-hedding{
+    position: relative;
+    text-align: center;
+    bottom: 400px;
+    color: rgb(228, 195, 112);
+    text-shadow: 5px 2px 4px rgb(141, 222, 233);
+}
+.text-hedding-1{
+    position: relative;
+    color: rgb(243, 138, 1);
+    text-align: center;
+    bottom: 380px;
+    text-shadow: 5px 2px 4px rgb(141, 222, 233);
+}
+
+
+#nav > li:hover > a{
+	color: rgb(0, 0, 0);
+	background-color: rgb(130, 197, 228);
+}
+
+#header .sosial {
+    position:relative;
+    bottom: 250px;
+    text-align: center;
+    
+}
+
+#header .sosial:hover a{
+    opacity: 0.5;
+}
+
+#header .sosial a{
+    text-decoration: none;
+    color: crimson;
+    font-size: 50px;
+}
+
+.container { 
+    margin-top: 36px;
+    display: flex;
+    justify-content: space-around;
+    animation: slideInleft ease 0.4s;
+    
+}
+
+.member-item_one img{
+   width: 800px;
+   height: 1000px;
+   border-radius: 15%;
+   padding: 20px;
+}
+
+.member-item_tour img{
+    width: 500px;
+   height:500px;
+   border-radius: 15%;
+   padding: 20px;
+}
+
+.member-item_one{
+    animation: opa ease-out 3s;
+}
+
+.member-item_tour{
+    animation: opa ease-out 10s;
+}
+
+.member-item_one:hover img{
+    opacity: 0.9;
+}
+
+.member-item_tour:hover img{
+    opacity: 0.9;
+}
+
+@keyframes opa{
+    from {left: 0; opacity: 0;}
+    to {left: auto; opacity: 1;}
+}
+
+.member-item_one{
+    flex: 1;
+
+}
+
+.member-item_tour{
+    flex: 1;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.member-item-1{
+    flex: 1;
+}
+
+.member-item-2{
+    flex: 1;
+}
+
+#footer .sosial a {
+    text-decoration: none;
+    color: darkgray;
+}
+
+.toast{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInleft ease 0.4s , fadeout linear 1s 3s forwards;
+    
+}
+
+@keyframes slideInleft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeout{
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes slideInleft-1{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.toast {
+    position: fixed;
+    top: 52px;
+    right: 32px;
+    display: flex;
+}
+
+.toast + .toast{
+    margin-top: 20px;
+}
+
+.toast_icon{
+    font-size: 24px;
+}
+
+.toast_close,
+.toast_icon{
+    padding: 0 16px;
+    
+}
+
+.toast_body{
+    flex-grow: 1;
+}
+
+.toast_title{
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+.toast_msg{
+    font-size: 14px;
+    color: #333;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.toast_close{
+    font-size: 20px;
+    color: rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+.toast--success{
+     border-color: #47d864;
+     display: flex;
+     align-items: center;
+     background-color: #fff;
+     padding: 20px 0;
+     min-width: 400px;
+     max-width: 450px;
+     border-radius: 2px;
+     border-left: 4px solid;
+     box-shadow: 0 10px 8px rgba(0, 0, 0, 0.08);
+     animation: slideInleft-1 ease 1s , fadeout linear 2s 60s forwards;
+
+}
+
+.toast--success .toast_icon{
+    color: #47d864;
+}
+
+.toast--info{
+    border-color: #2f86eb;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInleft ease 0.6s , fadeout linear 3s 10s forwards;
+}
+
+.toast--info .toast_icon{
+    color: #2f86eb;;
+}
+
+.toast--warning{
+    border-color: #ffc021;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 0;
+    min-width: 400px;
+    max-width: 450px;
+    border-radius: 2px;
+    border-left: 4px solid;
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInleft ease 0.6s , fadeout linear 2s 5s forwards;
+}
+
+.toast--warning .toast_icon{
+    color: #ffc021;
+}
+
+.toast--error{
+    border-color: rgb(224, 3, 3);
+}
+
+.toast--error .toast_icon{
+    color: rgb(224, 3, 3);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 48px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+    user-select: none;
+  }
+  
+  /* Modifier */
+  .btn--size-l {
+    padding: 16px 56px;
+  }
+  
+  .btn--size-s {
+    padding: 8px 32px;
+  }
+  
+  .btn:hover {
+    opacity: 0.8;
+  }
+  
+  .btn + .btn {
+    margin-left: 16px;
+  }
+  
+  .btn--success {
+    background-color: #71be34;
+  }
+  
+  .btn--warn {
+    background-color: #ffb702;
+  }
+  
+  .btn--danger {
+    background-color: #ff623d;
+  }
+  
+  .btn--disabled, .btn[disabled] {
+    opacity: 0.5 !important;
+    pointer-events: none;
+  }
+
+
+
+
+
+
+ 
+
+
+
